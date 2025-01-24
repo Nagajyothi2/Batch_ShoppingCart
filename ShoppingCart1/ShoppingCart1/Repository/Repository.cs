@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿    using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace ShoppingCart1.Repository
@@ -29,7 +29,7 @@ namespace ShoppingCart1.Repository
                 query = dbSet.AsNoTracking();
             }
             query = query.Where(filter);
-            if(string.IsNullOrEmpty(includeProperties))
+            if(!string.IsNullOrEmpty(includeProperties))
             {
                 foreach(var property in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
                 {
