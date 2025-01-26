@@ -10,5 +10,6 @@ namespace ShoppingCart1.Repository
            
         }
         public DbSet<Category>Category {  get; set; }
+        public DbSet<Product> Product { get; set; }
     }
 }
